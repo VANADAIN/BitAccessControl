@@ -1,6 +1,6 @@
 # Bit access control
 
-Most of the smart-contacts don't use a lot of roles inside access control. This version is gas-optimized access control for `DEFAULT_ADMIN` and 7 other roles.
+Most of the smart-contacts don't use many roles inside access control. This version is gas-optimized access control for `DEFAULT_ADMIN` and 7 other roles.
 This smart contract is actually a copy of default OZ AccessControl.sol, but the roles have a type of uint8 bitmask instead of bytes32.
 
 Example:
