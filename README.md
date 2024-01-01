@@ -1,10 +1,12 @@
 # Bit access control
 
 Most of the smart-contacts don't use a lot of roles inside access control. This version is gas-optimized access control for `DEFAULT_ADMIN` and 7 other roles.
-This smart contract is actually a copy of default OZ AccessControl.sol, but the roles itself has a type of uint8 bitmask instead of bytes32.
+This smart contract is actually a copy of default OZ AccessControl.sol, but the roles have a type of uint8 bitmask instead of bytes32.
+
+Example:
 
 ```
-uint8 public constant MINTER = uint8(1) << 1; // 00000010
+uint8 public constant MINTER = uint8(1) << 1;
 ```
 
 As you can see, each of the role is a bit shifted with some value. Run test command to see gas difference.
@@ -38,3 +40,7 @@ npx hardhat help
 npx hardhat test
 REPORT_GAS=true npx hardhat test
 ```
+
+# Disclaimer
+
+These contracts are not audited and haven't been tested in production. Use at your own risk.
